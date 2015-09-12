@@ -17,12 +17,13 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <title>TIBA FM</title>
-        <link rel="import" href="bower_components/webcomponentsjs/webcomponents-lite.js">
+        <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
         <link rel="import" href="bower_components/iron-icons/image-icons.html">
         <link rel="import" href="bower_components/paper-drawer-panel/paper-drawer-panel.html">
         <link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
         <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
         <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+        <link rel="import" href="picture-frame.html">
         <style>
             body {
               font-family: 'Roboto', sans-serif;
@@ -30,42 +31,11 @@
         </style>
     </head>
     <body>
-        <dom-module id="x-app">
-
-          <link rel="import" type="css" href="x-app.css">
-
-          <template>
-
-            <paper-drawer-panel id="drawerPanel" responsive-width="1280px">
-
-              <div class="nav" drawer>
-                <!-- Nav Content -->
-              </div>
-
-              <paper-header-panel class="main" main mode="waterfall">
-
-                <!-- Main Toolbar -->
-                <paper-toolbar>
-                  <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
-                </paper-toolbar>
-
-                <!-- Main Content -->
-                <div class="content"></div>
-
-              </paper-header-panel>
-
-            </paper-drawer-panel>
-
-          </template>
-
-          <script>
-            Polymer({
-              is: 'x-app'
-            });
-          </script>
-
-        </dom-module>
         <div class="app">
+            <picture-frame>
+              <img src="img/logo.png" height="30">
+            </picture-frame>
+
             <h1>Apache Cordova</h1>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
